@@ -629,11 +629,6 @@ if CheckPlace() then
 		OutlineBox.Parent = Part
 		OutlineBox.Adornee = Part
 		OutlineBox.LineThickness = 0.05
-
-		repeat task.wait() until LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart") and LocalPlayer.Character:FindFirstChild("Humanoid")
-		LocalPlayer.Character.Humanoid.PlatformStand = true
-		LocalPlayer.Character.HumanoidRootPart.Anchored = true
-		LocalPlayer.Character.HumanoidRootPart.CFrame = Part.CFrame + Vector3.new(0, 3.5, 0)
 	end)
 
 	getgenv().OldPickups = LocalPlayer.PlayerGui:WaitForChild("ReactOverridesTopBar"):WaitForChild("Frame"):WaitForChild("items"):WaitForChild("Operation I.C.E"):WaitForChild("text").Text
