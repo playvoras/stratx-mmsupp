@@ -66,7 +66,6 @@ getgenv().ConsolePrint = function(Color,Type,...)
             error("["..os.date("%X").."]["..Type.."] "..String)
         end)
     end
-    getgenv().AppendFile(true,LocalPlayer.Name.."'s log","StrategiesX/UserLogs","["..os.date("%X").."]["..Type.."] "..String.."\n")
 end
 getgenv().ConsoleInfo = function(...)
     local TableText = {...}
