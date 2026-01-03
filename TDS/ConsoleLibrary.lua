@@ -4,7 +4,7 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
 local Window = ConsoleUI.new({
-    text = "ADS - AFK Defense Simulator,
+    text = "ADS - AFK Defense Simulator",
     size = Vector2.new(700, 420),
     shadow = 1,
     rounding = 1,
