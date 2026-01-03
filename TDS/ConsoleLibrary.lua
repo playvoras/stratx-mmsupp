@@ -3,51 +3,8 @@ local ConsoleUI = if getthreadidentity and getthreadidentity() < 7 then loadstri
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
-getgenv().WriteFile = WriteFile or function(check,name,location,str)
-    if not check then
-        return
-    end
-    if type(name) == "string" then
-        if not type(location) == "string" then
-            location = ""
-        end
-        if not isfolder(location) then
-            makefolder(location)
-        end
-        if type(str) ~= "string" then
-            error("Argument 4 must be a string got " .. tostring(number))
-        end
-        writefile(location.."/"..name..".txt",str)
-    else
-        error("Argument 2 must be a string got " .. tostring(number))
-    end
-end
-getgenv().AppendFile = AppendFile or function(check,name,location,str)
-    if not check then
-        return
-    end
-    if type(name) == "string" then
-        if not type(location) == "string" then
-            location = ""
-        end
-        if not isfolder(location) then
-            WriteFile(check,name,location,str)
-        end
-        if type(str) ~= "string" then
-            error("Argument 4 must be a string got " .. tostring(number))
-        end
-        if isfile(location.."/"..name..".txt") then
-            appendfile(location.."/"..name..".txt",str)
-        else
-            WriteFile(check,name,location,str)
-        end
-    else
-        error("Argument 2 must be a string got " .. tostring(number))
-    end
-end
-
 local Window = ConsoleUI.new({
-    text = "Strategies X",
+    text = "AFK Defense Simulator,
     size = Vector2.new(700, 420),
     shadow = 1,
     rounding = 1,
